@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+	<title>HTML Template</title>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
+
+	<!-- Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+
+	<!-- Owl Carousel -->
+	<link type="text/css" rel="stylesheet" href="css/owl.carousel.css" />
+	<link type="text/css" rel="stylesheet" href="css/owl.theme.default.css" />
+
+	<!-- Magnific Popup -->
+	<link type="text/css" rel="stylesheet" href="css/magnific-popup.css" />
+
+	<!-- Font Awesome Icon -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+	<!-- Header -->
+	<header>
+
+		<!-- Nav -->
+		<nav id="nav" class="navbar">
+			<div class="container">
+
+				<div class="navbar-header">
+					<!-- Logo -->
+					<div class="navbar-brand">
+						<a href="index.html">
+							<!--<img class="logo" src="img/logo.png" alt="logo">-->
+						</a>
+					</div>
+					<!-- /Logo -->
+
+					<!-- Collapse nav button -->
+					<div class="nav-collapse">
+						<span></span>
+					</div>
+					<!-- /Collapse nav button -->
+				</div>
+
+				<!--  Main navigation  -->
+				<ul class="main-nav nav navbar-nav navbar-right">
+					<li><a href="index.html">Home</a></li>
+					<li class="has-dropdown"><a href="#blog">Case Study</a>
+						<ul class="dropdown">
+							<li><a href="OCR.html">OCR integrated with ML</a></li>
+							<li><a href="Drone.html">Drones-The Future of Robotics</a></li>
+							<!--<li><a href="RFID.html">RFID Tracker</a></li>
+							<li><a href="Mitra.html">Mitra (Chat Bot)</a></li>-->
+						</ul>
+					</li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+				<!-- /Main navigation -->
+
+			</div>
+		</nav>
+		<!-- /Nav -->
+
+		<!-- header wrapper -->
+		<div class="header-wrapper sm-padding bg-grey">
+			<div class="container">
+				<h2>CASE STUDY</h2>
+				<ul class="breadcrumb">
+					<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+					<li class="breadcrumb-item"><a href="index.html#blog">Case Study</a></li>
+					<li class="breadcrumb-item active">OCR integrated with ML</li>
+				</ul>
+			</div>
+		</div>
+		<!-- /header wrapper -->
+
+	</header>
+	<!-- /Header -->
+
+	<!-- Blog -->
+	<div id="blog" class="section md-padding">
+
+		<!-- Container -->
+		<div class="container">
+
+			<!-- Row -->
+			<div class="row">
+
+				<!-- Main -->
+				<main id="main" class="col-md-9">
+					<div class="blog">
+						<div class="blog-img">
+							<img class="img-responsive" src="./img/blog4.jpg" alt="">
+						</div>
+						<div class="blog-content">
+							<ul class="blog-meta">
+								<li><i class="fa fa-user"></i>Apurv Saha</li>
+								<li><i class="fa fa-clock-o"></i>18 March</li>
+							</ul>
+							<h3>Optical Charachter Recognition integrated with Machine Learning</h3><p>It’s far from a secret that Tesseract is not an all-in-one OCR tool that recognizes all sort of texts and drawings. In fact, this couldn’t be further from the truth. If this was a secret, I’ve already spoiled it and it’s already too late to go back anyway. So, why not dive deep into Tesseract and share few tips and tricks that could improve your results?</p>
+
+							<h3>What is Image Processing ?</h3><p>For quite some time, I’ve been a regular visitor of the ImproveQuality page in TensorFlow’s repository, where they name a few methods you can try to improve your accuracy. Although it claims to have various image processing operations internally, it’s quite often not enough. Here I’ll try to apply few of the things we can do by using OpenCV.</p>
+
+							<h3>Rescaling</h3><p>Tesseract works best on images that are 300 dpi, or more. If you’re working with images that have a DPI of less than 300 dpi, you might consider rescaling. Otherwise, rescaling may not make the impact that you thought it’d make.
+							I, personally, prefer to make sure that the images are at least 300 dpi, rather than rescaling them later in the pipeline. However, everyone has their own preferences. You do you.</p>
+
+							<h3>Noise Removal</h3><p>Most printed documents are likely to experience noise to some extent. Though the main reasons for this noise may vary, it’s clear that it makes it harder for computers to recognize characters. Noise on images can be removed by using a few different techniques combined. These include but are not limited to converting image to grayscale, dilation, erosion and blurring.
+							Dilation, erosion and blurring require a kernel matrix to work with. To put it simply, the larger your kernel size is, the wider the region your method gets to work on. And again, there’s no one kernel size value that fits all. You just need to play with numbers and, eventually, find the right values for your images.
+							However, a good rule of thumb could be starting with small kernel values for small fonts. Similarly, for larger fonts, you may experiment with larger kernels.
+
+							<h3>Binarization</h3><p>This is definitely a must. Let’s try to think like a computer for a second. In this cyber-reality where everything eventually boils down to 1’s and 0’s, converting image to black and white immensely helps Tesseract recognize characters. However, this might fail if input documents lack contrast or have a slightly darker background.</p>
+						</div>
+
+						<!-- blog tags -->
+						<div class="blog-tags">
+							<h5>Tags :</h5>
+							<a href="#"><i class="fa fa-tag"></i>OCR</a>
+							<a href="#"><i class="fa fa-tag"></i>Machine Learning</a>
+							<a href="#"><i class="fa fa-tag"></i>Automation</a>
+							<a href="#"><i class="fa fa-tag"></i>Development</a>
+							<a href="#"><i class="fa fa-tag"></i>Branding</a>
+							<a href="#"><i class="fa fa-tag"></i>Services</a>
+						</div>
+					</div>
+				</main>
+					</div>
+
+					<!-- /Tags -->
+
+				</aside>
+				<!-- /Aside -->
+
+			</div>
+			<!-- /Row -->
+
+		</div>
+		<!-- /Container -->
+
+	</div>
+	<!-- /Blog -->
+
+	<!-- Footer -->
+	<footer id="footer" class="sm-padding bg-dark">
+
+		<!-- Container -->
+		<div class="container">
+
+			<!-- Row -->
+			<div class="row">
+
+				<div class="col-md-12">
+
+					<!-- footer logo -->
+					<div class="footer-logo">
+						<!--<a href="index.html"><img src="img/logo-alt.png" alt="logo"></a>-->
+					</div>
+					<!-- /footer logo -->
+
+					<!-- footer follow -->
+					<ul class="footer-follow">
+						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+						<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+						<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+						<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+					</ul>
+					<!-- /footer follow -->
+
+					<!-- footer copyright -->
+					<div class="footer-copyright">
+						<p>Copyright © 2017. All Rights Reserved. Designed by <a href="https://www.alinttec.com" target="_blank">Elint Techno Solutions</a></p>
+					</div>
+					<!-- /footer copyright -->
+
+				</div>
+
+			</div>
+			<!-- /Row -->
+
+		</div>
+		<!-- /Container -->
+
+	</footer>
+	<!-- /Footer -->
+
+	<!-- Back to top -->
+	<div id="back-to-top"></div>
+	<!-- /Back to top -->
+
+	<!-- Preloader -->
+	<div id="preloader">
+		<div class="preloader">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+	<!-- /Preloader -->
+
+	<!-- jQuery Plugins -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+
+</html>
