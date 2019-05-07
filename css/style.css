@@ -52,11 +52,27 @@ body {
     color: #868F9B;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1{
+    font-family: 'Arial', sans-serif;
+    font-weight: 700;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    color: #10161A;
+}
+
+h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     margin-top: 0px;
     margin-bottom: 20px;
+    color: #10161A;
+}
+
+h7.oblique{
+    font-family: oblique;
+    font-weight: 700;
+    margin-top: 0px;
+    margin-bottom: 80px;
     color: #10161A;
 }
 
@@ -78,6 +94,10 @@ h4 {
 
 h5 {
     font-size: 16px;
+}
+
+h7 {
+    font-size: 20px;
 }
 
 a {
@@ -593,9 +613,6 @@ header {
     text-align: center;
 }
 
-.home-content h1 {
-  text-transform: uppercase;
-}
 .home-content button {
   margin-top: 20px;
 }
