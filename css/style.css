@@ -68,12 +68,9 @@ h2, h3, h4, h5, h6 {
     color: #10161A;
 }
 
-h7.italic{
-    font-family: italic;
-    font-weight: 700;
-    margin-top: 0px;
-    margin-bottom: 80px;
-    color: #10161A;
+h7
+{
+    font-family: 'Sofia';font-size: 22px;
 }
 
 h1 {
@@ -94,10 +91,6 @@ h4 {
 
 h5 {
     font-size: 16px;
-}
-
-h7 {
-    font-size: 20px;
 }
 
 a {
